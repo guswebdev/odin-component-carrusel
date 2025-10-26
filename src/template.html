@@ -3,14 +3,70 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Template Webpack</title>
+    <title>Carrusel</title>
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- FONT AWESOME -->
   </head>
   <body>
     <header class="header">
-      <h1>Template Webpack</h1>
+      <h1>Carrusel</h1>
     </header>
     <main>
-      <h2>Content Main</h2>
+      <section class="carrusel">
+        <div class="atras">
+          <i class="fa-solid fa-arrow-left" data-btn="prev"></i>
+        </div>
+        <article class="carrusel-marco" data-carrusel>
+          <div class="carrusel-item">
+            <img
+              src="https://fastly.picsum.photos/id/542/1280/960.jpg?hmac=Nxz1rUG8AyUKG8u4l9_IefPZLrVfthJvaHMbxm2sYLE"
+              alt=""
+            />
+          </div>
+          <div class="carrusel-item">
+            <img
+              src="https://fastly.picsum.photos/id/243/1280/960.jpg?hmac=b1BukLfhWWeDBwXE2BB7JSsHya9EL0tb4bVWSDDhKds"
+              alt=""
+            />
+          </div>
+          <div class="carrusel-item">
+            <img
+              src="https://fastly.picsum.photos/id/511/1280/960.jpg?hmac=z0zvi0wRh0JhbJQfWrR2afApUnSb5XMwPWzW4Yopmqs"
+              alt=""
+            />
+          </div>
+          <div class="carrusel-item">
+            <img
+              src="https://fastly.picsum.photos/id/436/1280/960.jpg?hmac=dbUbzGMYmdyI1kJVp4AUNsv9vVJgyf3ZaA_F0c_aN9U"
+              alt=""
+            />
+          </div>
+        </article>
+        <div class="adelante">
+          <i class="fa-solid fa-arrow-right" data-btn="next"></i>
+        </div>
+      </section>
+      <ul class="carrusel-controles">
+        <li class="carrusel-punto">
+          <i class="fa-regular fa-circle" data-btn="control"></i>
+        </li>
+        <li class="carrusel-punto">
+          <i class="fa-regular fa-circle" data-btn="control"></i>
+        </li>
+        <li class="carrusel-punto">
+          <i class="fa-regular fa-circle" data-btn="control"></i>
+        </li>
+        <li class="carrusel-punto">
+          <i class="fa-regular fa-circle" data-btn="control"></i>
+        </li>
+      </ul>
     </main>
     <footer class="footer">
       <h3>Hecho por Gustavo Miño</h3>

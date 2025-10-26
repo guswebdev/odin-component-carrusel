@@ -3,20 +3,39 @@ import { vista } from "./Vista";
 
 class Controlador {
   DOMContentLoaded() {
-    console.log("Hello World");
+    vista.inicializarPosicion();
+    setInterval(() => {
+      vista.posicionSiguiente();
+      vista.render();
+    }, 5000);
   }
   click(e) {
-    console.log("Eventos Click");
+   
+    if (e.target.dataset.btn === vista.$btnPrev.dataset.btn) {
+     
+      vista.posicionAnterior();
+      vista.render();
+    }
+    if (e.target.dataset.btn === vista.$btnNext.dataset.btn) {
+     
+      vista.posicionSiguiente();
+      vista.render();
+    }
+
+    if (vista.$btnsControles.includes(e.target)) {
+      const index = vista.$btnsControles.indexOf(e.target);
+
+      vista.cambiarDiapositiva(index);
+      vista.render();
+    }
+    
   }
-  submit(e) {
-    console.log("Eventos Submit");
-  }
+  
 }
 
 const controlador = new Controlador();
 
 document.addEventListener("DOMContentLoaded", controlador.DOMContentLoaded);
 document.addEventListener("click", controlador.click);
-document.addEventListener("submit", controlador.submit);
 
 export { controlador };
